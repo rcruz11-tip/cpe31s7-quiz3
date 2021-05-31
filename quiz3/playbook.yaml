@@ -1,0 +1,12 @@
+---
+- name: Run roles in VM
+  hosts: target
+
+  tasks:
+  - name: Install FTP Server (vsftpd)
+    include_role:
+      name: ftpserver
+
+  - name: Run FTP Client
+    include_role:
+      name: ftpclient
